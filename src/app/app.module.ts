@@ -10,7 +10,7 @@ import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { ApiService } from './api.service';
-import {HTTPClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import {HTTPClientModule} from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HTTPClientModule,
+    HttpClientModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

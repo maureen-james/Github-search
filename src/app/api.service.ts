@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+  BASE_URL:string ='https://jsonplaceholder.typicode.com'
 
   constructor(private http:HttpClient) { }
   
   
   getRepo(username:string):any{
-    return this.http.get{`https://api.github.com/users/${username}/repos`};
+    return this.http.get(`https://api.github.com/users/${username}/repos`);
   }
 }
