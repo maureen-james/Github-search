@@ -9,6 +9,8 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { ApiService } from './api.service';
+import {HTTPClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { DateCountPipe } from './date-count.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HTTPClientModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
