@@ -55,7 +55,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   [x: string]: any;
-  private userName = 'maryammuchai';
+  private userName = 'maureen-james';
   private clientId = 'e57c1b2aae512a8e0b5b';
   private clientSecret = 'aeb1040acfdcd7f83895ac7940da76d9d03225e7';
 
@@ -87,7 +87,7 @@ export class ApiService {
   // }
 
   getRepos() {
-    return this._http
+    return this['_http']
       .get(
         'https://api.github.com/users/' +
           this.userName +
