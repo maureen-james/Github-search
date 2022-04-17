@@ -1,68 +1,47 @@
-<p>users works!</p>
 <div class="container">
-    <ng-progress></ng-progress>
-    <div class="row ">
-      <div class="col-md-12">
-        <app-search-form (getName)='findUser($event)'></app-search-form>
-      </div>
+  <div class="card-info">
+    <div class="card-header">
+      username: {{username.login}}
+
     </div>
-    <div class="row">
-      <div class="col-md-7">
-        <div class="table table-striped table-bordered">
-          <h3> {{users.name}}</h3>
-          <table class="table table-striped table-light">
-            <tbody>
-            <tr>
-              <th scope="row">Github Username:</th>
-                <td> <a href="{{users.html_url}}" target="_blank">{{users.login}}</a></td>
-  
-            </tr>
-            <tr>
-              <th scope="row">Repositories:</th>
-              <td>{{users.public_repos }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Date created:</th>
-              <td>{{users.created_at | date}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Followers:</th>
-              <td>{{users.followers}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Following</th>
-              <td>{{users.following}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-md-5 image-end">
-        <img src="{{users.avatar_url}}">
-      </div>
+    <div class="card-body info">
+      <div class="row">
+          <div class="col-md-3">
+              <img [src]='username.avatar_url' [title]='username.name' class="img-responsive profileimage">
+          </div>
+
+          <div class="col-md-9">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Username: </strong> {{username.login}}</li>
+                <li class="list-group-item"><strong>Name: </strong> {{username.name}}</li>
+                <li class="list-group-item"><strong>Email: </strong> {{username.email}}</li>
+                <li class="list-group-item"><strong>Location: </strong> {{username.location}}</li>
+                <li class="list-group-item"><strong>Created: </strong> {{username.created_at | dateCount}}</li> 
+            </ul>
+       </div>
+       <div class="stats">
+        <span class="btn btn-secondary">{{username.followers}} Followers</span>
+        <span class="btn btn-primary">{{username.following}} Following</span>
+        <span class="btn btn-success">{{username.public_repos}} Public Repos</span>
+        <span class="btn btn-info">{{username.public_gists}} Public Gists</span>
     </div>
-    <hr>
+    </div>
+   </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div  class="col-md-12">
-        <h2 style="color: #056b5b" > User Repositories</h2>
-        <div class="table table-striped">
-          <table class="table">
-            <tbody>
-            <tr *ngFor='let repository of userRepos.newRepository'>
-              <td>
-                  <a href="{{repository.html_url}}" target="_blank" >{{repository.name}}</a>
-  
-                  <br>
-                <p class="desc">Description: {{repository.description}}</p>
-                <br>
-                <p>Date Created: {{repository.created_at | date}}</p>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+  <div class="card info" *ngIf="username.public_repos">
+    <div class="card-header">
+        <h2>Repos</h2>
     </div>
-  </div>
+    <div class="card-body " *ngFor="let repo of repos">
+        <div class="card row" appLatest>
+            <div class="card-body" appLatestrepos>
+                <h3>{{repo.name}}</h3>
+                <p>Created: {{repo.created_at | dateCount}}</p>
+                <p>Language Used: {{repo.language}}</p>
+                <p>{{repo.description}}</p>
+                <span><a href="{{repo.html_url}}" target="_blank" class="btn btn-success">View Project</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>                   
