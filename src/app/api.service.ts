@@ -9,7 +9,7 @@ export class ApiService {
   // BASE_URL:string ='https://jsonplaceholder.typicode.com'
   // userName:string;
   // repos:string;
-  // apikey:string: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
+  // apikey:string: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
 
 
 
