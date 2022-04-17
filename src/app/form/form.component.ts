@@ -22,9 +22,9 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class FormComponent implements OnInit {
     searchInfo = new Search('');
-    @Output() getName = new EventEmitter<Search>();
+    // @Output() getName = new EventEmitter<Search>();
 
-    searchFor(data){
+    searchFor(data: { value: any[]; reset: () => void; }){
         this.getName.emit(data.value.find);
         console.log(data.value.find)
         data.reset();
