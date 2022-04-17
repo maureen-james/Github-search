@@ -17,7 +17,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./users.component.css'],
   providers: [ApiService],
 })
-export class GithubComponent implements OnInit {
+export class UsersComponent implements OnInit {
   user: any;
   repos: any;
   userName: string='maureen-james';
