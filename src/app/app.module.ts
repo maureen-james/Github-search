@@ -11,7 +11,7 @@ import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { ApiService } from './api.service';
 import {HttpClientModule} from '@angular/common/http';
-import { UserComponent } from './user/user.component'
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +22,14 @@ import { UserComponent } from './user/user.component'
     FormComponent,
     HighlightDirective,
     DateCountPipe,
-    UserComponent,
+    NotFoundComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
