@@ -10,7 +10,8 @@ import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { ApiService } from './api.service';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { UserComponent } from './user/user.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http'
     FormComponent,
     HighlightDirective,
     DateCountPipe,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
