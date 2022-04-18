@@ -5,6 +5,9 @@
 export const environment = {
   production: false, 
   apiKey:"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",
+  clientId : '450229693207-n0sg25rjh9bfnhhsmrp1pal5d4a8km8v',
+  clientSecret : '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',
+
 };
 
 /*
