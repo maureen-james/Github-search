@@ -1,39 +1,15 @@
-// // import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-// // @Component({
-// //   selector: 'app-form',
-// //   templateUrl: './form.component.html',
-// //   styleUrls: ['./form.component.css']
-// // })
-// // export class FormComponent implements OnInit {
+@Component({
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
+})
+export class FormComponent implements OnInit {
 
-// //   constructor() { }
+  constructor() { }
 
-// //   ngOnInit(): void {
-// //   }
+  ngOnInit(): void {
+  }
 
-// // }
-// import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-
-// @Component({
-//   selector: 'app-form',
-//   templateUrl: './form.component.html',
-//   styleUrls: ['./form.component.css']
-// })
-// export class FormComponent implements OnInit {
-//     searchInfo = new Search('');
-//      @Output() getName = new EventEmitter<Search>();
-
-//     searchFor(data: { value: any[]; reset: () => void; }){
-//         this.getName.emit(data.value.find);
-//         console.log(data.value.find)
-//         data.reset();
-//     }
-
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// } 
+}
