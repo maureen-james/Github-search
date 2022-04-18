@@ -4,7 +4,7 @@
   <form action="">
 <div class="form-group">
   <br><br>
-  <label>Search Username</label>
+  <label appHover >Search Username</label>
   <input type="text" placeholder="Search GitHub userName" [(ngModel)]="userName" name="userName" (keyup) = "findProfile()">
 </div>
   </form>
@@ -39,7 +39,7 @@
 </div>
 </div>
 <hr>
-<div class="card">
+<div class="card info" *ngIf= "repos">
   <h4 class="card-header">Repos</h4>
   <div class="card-body col-md-12" >
         

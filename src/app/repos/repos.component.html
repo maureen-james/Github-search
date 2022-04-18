@@ -1,29 +1,30 @@
 <div class="card">
-    <div class="card-body col-md-12" >
-          
-            <div class="card">
-              <ul class="list-group" *ngFor="let repo of repos">
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+  <h4 class="card-header">Repos</h4>
+  <div class="card-body col-md-12" >
+        
+          <div class="card">
+            <ul class="list-group" *ngFor="let repo of repos">
+              <li class="list-group-item">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+
+                          <small>(Created days ago)</small>
+                          <p>{{repo.description}}</p>
+                      </div>
+                      <div class="col-md-3">
+                          <span class="badge badge-primary">{{repo.watchers}} Watcher</span>
+                          <span class="badge badge-info">{{repo.forks}} Forks</span>
+                          <br>
+                          <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-info">View Repo</a>
+                      </div>
+
+                      
+                  </div>
+                  
+              </li>
+            </ul>
+          </div>
+      </div>
   
-                            <small>(Created days ago)</small>
-                            <p>{{repo.description}}</p>
-                        </div>
-                        <div class="col-md-3">
-                            <span class="badge badge-primary">{{repo.watchers}} Watcher</span>
-                            <span class="badge badge-info">{{repo.forks}} Forks</span>
-                            <br>
-                            <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-info">View Repo</a>
-                        </div>
-  
-                        
-                    </div>
-                    
-                </li>
-              </ul>
-            </div>
-        </div>
-    
-  </div>
+</div>
