@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
-import { HighlightDirective } from './highlight.directive';
+import { HoverDirective } from './hover.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { ApiService } from './api.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -20,7 +20,7 @@ import { ReposComponent } from './repos/repos.component';
     NavbarComponent,
     UsersComponent,
     FormComponent,
-    HighlightDirective,
+    HoverDirective,
     DateCountPipe,
     NotFoundComponent,
     ReposComponent,

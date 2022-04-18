@@ -1,8 +1,8 @@
-import { HighlightDirective } from './highlight.directive';
+import { HoverDirective } from './hover.directive';
 
 describe('HighlightDirective', () => {
   it('should create an instance', () => {
-    const directive = new HighlightDirective();
+    const directive = new HoverDirective();
     expect(directive).toBeTruthy();
   });
 });
