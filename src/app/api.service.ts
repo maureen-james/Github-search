@@ -56,8 +56,8 @@ import { Observable } from 'rxjs';
 export class ApiService {
   [x: string]: any;
   private userName = 'maureen-james';
-  private clientId = 'e57c1b2aae512a8e0b5b';
-  private clientSecret = 'aeb1040acfdcd7f83895ac7940da76d9d03225e7';
+  private clientId = '450229693207-n0sg25rjh9bfnhhsmrp1pal5d4a8km8v';
+  private clientSecret = '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';
 
   constructor(private httpClient: HttpClient) {}
 

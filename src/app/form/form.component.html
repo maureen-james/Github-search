@@ -10,7 +10,7 @@
       Enter the User Name: <input type="text" [(ngModel)]='userName'
       name='userName'(keyup)='findProfile()' class="Search" placeholder='Search or jump to ...'>
   </form> -->
-     <div class="container-fluid">
+     <!-- <div class="container-fluid">
         
       <form (ngSubmit)="searchFor(Form)" #Form="ngForm">
         <div class="form-group">
@@ -18,4 +18,13 @@
           <button type="submit" class="btn btn-group"> Search</button>
         </div>
       </form>
-  </div> 
+  </div>  -->
+  <form action="">
+<div class="form-group">
+  <br><br>
+  <label>Search GitHub Username</label>
+  <input type="text" placeholder="Search GitHub userName" [(ngModel)]="userName" name="userName" (keyup) = "findProfile()">
+</div>
+  </form>
+<br><br>
+<div class= "container1" *ngIf = "user">

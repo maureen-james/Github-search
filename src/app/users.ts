@@ -5,11 +5,11 @@
 // }
 export class Users {
         login: any;
-        bio: any;
-        name: any;
-        company: any;
-        location: any;
-        followers: any;
-        following: any;
-        public_repos:any;
+        bio!: string;
+        name!: string;
+        company!: string;
+        location!: string;
+        followers!: number;
+        following!: number;
+        public_repos!: number;
     }

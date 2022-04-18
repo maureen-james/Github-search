@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormComponent } from './form/form.component';
+// import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { ApiService } from './api.service';
@@ -18,7 +18,7 @@ import { UsersComponent } from './users/users.component';
     AppComponent,
     NavbarComponent,
     UsersComponent,
-    FormComponent,
+    // FormComponent,
     HighlightDirective,
     DateCountPipe,
     NotFoundComponent,
@@ -35,3 +35,6 @@ import { UsersComponent } from './users/users.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+function appRoutes(appRoutes: any, arg1: { useHash: true; }) {
+  throw new Error('Function not implemented.');
+}

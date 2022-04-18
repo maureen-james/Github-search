@@ -55,7 +55,7 @@
   <form action="">
 <div class="form-group">
   <br><br>
-  <label>Search GitHub Username</label>
+  <label>Search Username</label>
   <input type="text" placeholder="Search GitHub userName" [(ngModel)]="userName" name="userName" (keyup) = "findProfile()">
 </div>
   </form>
@@ -76,12 +76,13 @@
           
       </div>
       <div class="col-md-2"></div>
-      <div class="col-md-6">
-          
+      <div class="col-md-12">
+          <ul class="bg-dark text-white">
            <li><span class="badge badge-primary">{{user.followers}} Followers</span></li>
               <li><span class="badge badge-secondary">{{user.following}} Following</span></li>
               <li><span class="badge badge-success">{{user.public_gists}} Public Gists</span></li>
               <li><span class="badge badge-info">{{user.public_repos}} Public Repos</span></li>
+              </ul>
               <hr>
           
       </div>
